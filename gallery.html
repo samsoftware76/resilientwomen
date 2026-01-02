@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore our community impact through photos and videos from Resilient Women CBO programs in Mukono District, Uganda.">
+    <title>Gallery - Resilient Women CBO</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="reswomen logo.png">
+
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+            background: var(--color-white);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(50, 64, 78, 0.9), transparent);
+            color: white;
+            padding: var(--spacing-md);
+            transform: translateY(100%);
+            transition: transform var(--transition-base);
+        }
+
+        .gallery-item:hover .gallery-item-overlay {
+            transform: translateY(0);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-brand">
+                <img src="reswomen logo.png" alt="Resilient Women Logo" class="navbar-logo">
+            </a>
+
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="navbar-nav">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="get-involved.html" class="nav-link">Get Involved</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="get-involved.html#donate" class="btn btn-primary btn-sm">Donate Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="hero" style="min-height: 400px;">
+        <div class="container">
+            <div class="hero-content text-center" style="max-width: 100%;">
+                <h1 class="hero-title">Our Gallery</h1>
+                <p class="hero-subtitle">
+                    Witness the impact of our work through images and stories from the community
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHOTO GALLERY -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="text-center mb-xl">
+                <h2>Photo Gallery</h2>
+                <p style="max-width: 700px; margin: 0 auto; font-size: 18px;">
+                    Capturing moments of empowerment, growth, and community resilience
+                </p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item animate-on-scroll">
+                    <img src="IMG-20251025-WA0055.jpg" alt="Community empowerment program">
+                    <div class="gallery-item-overlay">
+                        <p style="font-weight: 600; margin: 0;">Community Empowerment</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll">
+                    <img src="IMG-20251107-WA0691.jpg" alt="Skills training session">
+                    <div class="gallery-item-overlay">
+                        <p style="font-weight: 600; margin: 0;">Skills Training</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll">
+                    <img src="IMG-20251115-WA0118.jpg" alt="Women empowerment initiative">
+                    <div class="gallery-item-overlay">
+                        <p style="font-weight: 600; margin: 0;">Women Empowerment</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll">
+                    <img src="IMG-20251115-WA0119.jpg" alt="Community gathering">
+                    <div class="gallery-item-overlay">
+                        <p style="font-weight: 600; margin: 0;">Community Gathering</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll">
+                    <img src="IMG-20251118-WA0056.jpg" alt="Project implementation">
+                    <div class="gallery-item-overlay">
+                        <p style="font-weight: 600; margin: 0;">Project Implementation</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll">
+                    <img src="IMG-20251118-WA0062.jpg" alt="Youth engagement program">
+                    <div class="gallery-item-overlay">
+                        <p style="font-weight: 600; margin: 0;">Youth Engagement</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll">
+                    <img src="IMG-20251118-WA0064.jpg" alt="Environmental conservation">
+                    <div class="gallery-item-overlay">
+                        <p style="font-weight: 600; margin: 0;">Environmental Conservation</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll">
+                    <img src="IMG-20251118-WA0066.jpg" alt="Sustainable livelihoods">
+                    <div class="gallery-item-overlay">
+                        <p style="font-weight: 600; margin: 0;">Sustainable Livelihoods</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll">
+                    <img src="IMG-20251118-WA0104.jpg" alt="Community development">
+                    <div class="gallery-item-overlay">
+                        <p style="font-weight: 600; margin: 0;">Community Development</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll">
+                    <img src="IMG-20251118-WA0110.jpg" alt="Renewable energy training">
+                    <div class="gallery-item-overlay">
+                        <p style="font-weight: 600; margin: 0;">Renewable Energy Training</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll">
+                    <img src="IMG-20251118-WA0112.jpg" alt="Social welfare program">
+                    <div class="gallery-item-overlay">
+                        <p style="font-weight: 600; margin: 0;">Social Welfare Program</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO GALLERY -->
+    <section class="section bg-gray">
+        <div class="container">
+            <div class="text-center mb-xl">
+                <h2>Video Gallery</h2>
+                <p style="max-width: 700px; margin: 0 auto; font-size: 18px;">
+                    See our programs in action and hear from community members
+                </p>
+            </div>
+
+            <div class="grid grid-2 gap-lg">
+                <div class="animate-on-scroll">
+                    <div class="video-container">
+                        <video controls>
+                            <source src="VID-20251118-WA0115.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h4 class="mt-md">Community Impact Story</h4>
+                    <p>Witness the transformation in our community through this inspiring video.</p>
+                </div>
+
+                <div class="animate-on-scroll">
+                    <div class="video-container">
+                        <video controls>
+                            <source src="VID-20251210-WA0097.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h4 class="mt-md">Program Highlights</h4>
+                    <p>A glimpse into our various empowerment programs and initiatives.</p>
+                </div>
+
+                <div class="animate-on-scroll">
+                    <div class="video-container">
+                        <video controls>
+                            <source src="VID-20251210-WA0098.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h4 class="mt-md">Skills Training Session</h4>
+                    <p>See how we're equipping community members with valuable skills.</p>
+                </div>
+
+                <div class="animate-on-scroll">
+                    <div class="video-container">
+                        <video controls>
+                            <source src="VID-20251210-WA0099.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h4 class="mt-md">Community Testimonials</h4>
+                    <p>Hear directly from those whose lives have been transformed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="section bg-primary">
+        <div class="container text-center">
+            <h2 class="mb-md" style="color: var(--color-accent);">Be Part of Our Story</h2>
+            <p class="mb-xl"
+                style="font-size: 20px; max-width: 700px; margin: 0 auto var(--spacing-xl); color: var(--color-accent);">
+                Your support helps us create more success stories and transform more lives
+            </p>
+            <div class="flex-center gap-md" style="flex-wrap: wrap;">
+                <a href="get-involved.html#donate" class="btn btn-accent btn-lg">Donate Now</a>
+                <a href="get-involved.html#volunteer" class="btn btn-outline btn-lg"
+                    style="border-color: var(--color-accent); color: var(--color-accent);">Volunteer With Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Resilient Women CBO</h4>
+                    <p style="opacity: 0.9; line-height: 1.8;">
+                        Empowering communities in Mukono District, Uganda through economic development, environmental
+                        protection, and renewable energy advocacy.
+                    </p>
+                    <p style="margin-top: var(--spacing-md); font-weight: 600; color: var(--color-primary);">
+                        "Empowering Communities, Building Resilience"
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Our Programs</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="constitution.html">Constitution</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="get-involved.html#donate">Donate</a></li>
+                        <li><a href="get-involved.html#volunteer">Volunteer</a></li>
+                        <li><a href="get-involved.html#partner">Partner With Us</a></li>
+                        <li><a href="get-involved.html#membership">Become a Member</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>📍 Mukono District, Uganda</li>
+                        <li>📧 <a href="mailto:resilientwomen@gmail.com">resilientwomen@gmail.com</a></li>
+                        <li>📱 <a href="tel:+256774622736">+256 774 622736</a></li>
+                        <li>📱 <a href="tel:+256772196766">+256 772 196766</a></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">f</a>
+                        <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Resilient Women Community Based Organization. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
