@@ -25,16 +25,21 @@
         .category-header {
             background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
             color: var(--color-accent);
-            padding: 60px 0;
-            margin-bottom: 50px;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
+            padding: 40px;
+            /* margin-bottom removed to fit in card */
+            /* border-radius removed to fit in card */
             position: relative;
+            flex: 1;
+            /* Fill remaining space in card */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .category-header-content {
             position: relative;
             z-index: 2;
+            width: 100%;
         }
 
         .category-badge {
@@ -87,6 +92,36 @@
             border: 1px solid rgba(0, 0, 0, 0.05);
             display: flex;
             flex-direction: column;
+            gap: 15px;
+            /* Added spacing between badge and content */
+        }
+
+        /* ... existing styles ... */
+
+        .category-image-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+            border-bottom: 6px solid white;
+            /* Separator for Mobile */
+        }
+
+        /* ... existing media query ... */
+
+        .category-image-container {
+            width: 50%;
+            height: auto;
+            min-height: 350px;
+            border-bottom: none;
+            border-right: 6px solid white;
+            /* Separator for Desktop */
+        }
+
+        .category-section:nth-of-type(even) .category-image-container {
+            border-right: none;
+            border-left: 6px solid white;
+            /* Separator for Alternating Desktop */
         }
 
         .project-card:hover {
@@ -95,12 +130,16 @@
         }
 
         .project-number {
-            background: var(--color-primary);
-            color: var(--color-accent);
-            padding: 12px 20px;
+            background: rgba(178, 187, 30, 0.2);
+            color: var(--color-primary-dark);
+            padding: 6px 14px;
             font-weight: 700;
-            font-size: 14px;
+            font-size: 12px;
             letter-spacing: 1px;
+            border-radius: 50px;
+            width: fit-content;
+            margin: 25px 0 0 25px;
+            display: inline-block;
         }
 
         .project-content {
@@ -169,18 +208,115 @@
             .category-title {
                 font-size: 32px;
             }
+        }
 
-            .category-budget {
-                font-size: 22px;
+        .category-hero {
+            position: relative;
+            background: black;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 30px;
+            display: block;
+            /* Standard block */
+            height: 300px;
+            /* Fixed height for banner feel */
+            gap: 0;
+        }
+
+        .category-image-container {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 0;
+            /* Parent handles radius */
+            box-shadow: none;
+        }
+
+        .category-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            opacity: 0.8;
+            /* Slight darken for text contrast */
+        }
+
+        .category-hero:hover .category-image {
+            transform: scale(1.05);
+        }
+
+        .category-header {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            /* Overlay gradient */
+            color: white;
+            padding: 30px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+            box-shadow: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            z-index: 2;
+        }
+
+        .category-title {
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 5px;
+        }
+
+        .category-budget {
+            color: var(--color-primary);
+            /* Brand color pop */
+            font-weight: 700;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Hide badge and description in the overlay to keep it clean, 
+           or style them to fit. Let's hide badge, keep description? 
+           User wants "Gallery Style" -> usually minimal text. 
+           I'll hide description in the hero and move it below? 
+           The HTML structure has them inside. I will just style them for now. */
+
+        .category-description {
+            display: none;
+            /* Hide long text in the banner overlay */
+        }
+
+        .category-badge {
+            background: var(--color-primary);
+            color: var(--color-accent);
+        }
+
+        /* Restore description as a separate element below? 
+           I can't easily move it out of the container with CSS only.
+           I will let it be hidden for "Gallery Look" or show it if space permits.
+           Let's show it on Mobile? No, cleaner to hide. */
+
+        @media (min-width: 992px) {
+
+            /* No split view needed. Banner is nice. */
+            .category-hero {
+                flex-direction: column;
+                align-items: flex-start;
             }
 
-            .projects-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
+            .category-image-container {
+                width: 100%;
+                border: none;
             }
 
             .category-header {
-                padding: 40px 20px;
+                width: 100%;
+                padding: 40px;
             }
         }
     </style>
@@ -231,15 +367,21 @@
     <!-- ECONOMIC EMPOWERMENT & LIVELIHOODS -->
     <section class="section bg-white category-section">
         <div class="container">
-            <div class="category-header text-center">
-                <div class="category-header-content">
-                    <span class="category-badge">Category 1</span>
-                    <h2 class="category-title">💼 Economic Empowerment & Livelihoods</h2>
-                    <p class="category-budget">Total Budget: $2,230,000</p>
-                    <p class="category-description">
-                        Empowering women, youth, and persons with disabilities through skills development,
-                        entrepreneurship support, and access to sustainable income opportunities.
-                    </p>
+            <div class="category-hero animate-on-scroll">
+                <div class="category-image-container">
+                    <img src="category_economic_empowerment.jpg" alt="Economic Empowerment & Livelihoods"
+                        class="category-image" loading="lazy">
+                </div>
+                <div class="category-header text-center">
+                    <div class="category-header-content">
+                        <span class="category-badge">Category 1</span>
+                        <h2 class="category-title">💼 Economic Empowerment & Livelihoods</h2>
+                        <p class="category-budget">Total Budget: $2,230,000</p>
+                        <p class="category-description">
+                            Empowering women, youth, and persons with disabilities through skills development,
+                            entrepreneurship support, and access to sustainable income opportunities.
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -418,15 +560,21 @@
     <!-- CHARITY & SOCIAL WELFARE -->
     <section class="section bg-gray category-section">
         <div class="container">
-            <div class="category-header text-center">
-                <div class="category-header-content">
-                    <span class="category-badge">Category 2</span>
-                    <h2 class="category-title">🤝 Social Welfare & Charity</h2>
-                    <p class="category-budget">Total Budget: $1,350,000</p>
-                    <p class="category-description">
-                        Providing care, support, and dignity to vulnerable community members including elderlies,
-                        persons with disabilities, and families in need.
-                    </p>
+            <div class="category-hero animate-on-scroll">
+                <div class="category-image-container">
+                    <img src="category_social_welfare.jpg" alt="Social Welfare & Charity" class="category-image"
+                        loading="lazy">
+                </div>
+                <div class="category-header text-center">
+                    <div class="category-header-content">
+                        <span class="category-badge">Category 2</span>
+                        <h2 class="category-title">🤝 Social Welfare & Charity</h2>
+                        <p class="category-budget">Total Budget: $1,350,000</p>
+                        <p class="category-description">
+                            Providing care, support, and dignity to vulnerable community members including elderlies,
+                            persons with disabilities, and families in need.
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -563,15 +711,22 @@
     <!-- COMMUNITY EDUCATION & LIFE SKILLS -->
     <section class="section bg-white category-section">
         <div class="container">
-            <div class="category-header text-center">
-                <div class="category-header-content">
-                    <span class="category-badge">Category 3</span>
-                    <h2 class="category-title">📚 Community Education & Life Skills</h2>
-                    <p class="category-budget">Total Budget: $850,000</p>
-                    <p class="category-description">
-                        Building capacity through education, leadership development, and essential life skills training
-                        for sustainable community transformation.
-                    </p>
+            <div class="category-hero animate-on-scroll">
+                <div class="category-image-container">
+                    <img src="category_education_skills.jpg" alt="Community Education & Life Skills"
+                        class="category-image" loading="lazy">
+                </div>
+                <div class="category-header text-center">
+                    <div class="category-header-content">
+                        <span class="category-badge">Category 3</span>
+                        <h2 class="category-title">📚 Community Education & Life Skills</h2>
+                        <p class="category-budget">Total Budget: $850,000</p>
+                        <p class="category-description">
+                            Building capacity through education, leadership development, and essential life skills
+                            training
+                            for sustainable community transformation.
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -685,15 +840,21 @@
     <!-- ENVIRONMENTAL PROTECTION & CLIMATE ACTION -->
     <section class="section bg-gray category-section">
         <div class="container">
-            <div class="category-header text-center">
-                <div class="category-header-content">
-                    <span class="category-badge">Category 4</span>
-                    <h2 class="category-title">🌍 Environment & Climate Action</h2>
-                    <p class="category-budget">Total Budget: $1,450,000</p>
-                    <p class="category-description">
-                        Protecting our environment through conservation, tree planting, sustainable practices, and
-                        climate-resilient livelihoods.
-                    </p>
+            <div class="category-hero animate-on-scroll">
+                <div class="category-image-container">
+                    <img src="category_environment_climate.jpg" alt="Environmental Protection & Climate Action"
+                        class="category-image" loading="lazy">
+                </div>
+                <div class="category-header text-center">
+                    <div class="category-header-content">
+                        <span class="category-badge">Category 4</span>
+                        <h2 class="category-title">🌍 Environment & Climate Action</h2>
+                        <p class="category-budget">Total Budget: $1,450,000</p>
+                        <p class="category-description">
+                            Protecting our environment through conservation, tree planting, sustainable practices, and
+                            climate-resilient livelihoods.
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -807,15 +968,22 @@
     <!-- RENEWABLE ENERGY -->
     <section class="section bg-white category-section">
         <div class="container">
-            <div class="category-header text-center">
-                <div class="category-header-content">
-                    <span class="category-badge">Category 5</span>
-                    <h2 class="category-title">🔋 Renewable Energy</h2>
-                    <p class="category-budget">Total Budget: $3,700,000</p>
-                    <p class="category-description">
-                        Transforming communities through access to clean, affordable, and sustainable renewable energy
-                        solutions.
-                    </p>
+            <div class="category-hero animate-on-scroll">
+                <div class="category-image-container">
+                    <img src="category_renewable_energy.jpg" alt="Renewable Energy" class="category-image"
+                        loading="lazy">
+                </div>
+                <div class="category-header text-center">
+                    <div class="category-header-content">
+                        <span class="category-badge">Category 5</span>
+                        <h2 class="category-title">🔋 Renewable Energy</h2>
+                        <p class="category-budget">Total Budget: $3,700,000</p>
+                        <p class="category-description">
+                            Transforming communities through access to clean, affordable, and sustainable renewable
+                            energy
+                            solutions.
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -946,15 +1114,21 @@
     <!-- GREEN & INTELLIGENT BUILDINGS -->
     <section class="section bg-gray category-section">
         <div class="container">
-            <div class="category-header text-center">
-                <div class="category-header-content">
-                    <span class="category-badge">Category 6</span>
-                    <h2 class="category-title">🏗️ Green & Intelligent Buildings</h2>
-                    <p class="category-budget">Total Budget: $2,080,000</p>
-                    <p class="category-description">
-                        Advancing sustainable construction practices and smart building technologies for
-                        energy-efficient, climate-friendly communities.
-                    </p>
+            <div class="category-hero animate-on-scroll">
+                <div class="category-image-container">
+                    <img src="category_green_buildings.jpg" alt="Green & Intelligent Buildings" class="category-image"
+                        loading="lazy">
+                </div>
+                <div class="category-header text-center">
+                    <div class="category-header-content">
+                        <span class="category-badge">Category 6</span>
+                        <h2 class="category-title">🏗️ Green & Intelligent Buildings</h2>
+                        <p class="category-budget">Total Budget: $2,080,000</p>
+                        <p class="category-description">
+                            Advancing sustainable construction practices and smart building technologies for
+                            energy-efficient, climate-friendly communities.
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -1086,15 +1260,21 @@
     <!-- COMMUNITY INVESTMENT & COOPERATIVES -->
     <section class="section bg-white category-section">
         <div class="container">
-            <div class="category-header text-center">
-                <div class="category-header-content">
-                    <span class="category-badge">Category 7</span>
-                    <h2 class="category-title">💼 Community Investment & Microfinance</h2>
-                    <p class="category-budget">Total Budget: $1,550,000</p>
-                    <p class="category-description">
-                        Strengthening community-based financial systems through cooperatives, savings groups, and
-                        inclusive investment opportunities.
-                    </p>
+            <div class="category-hero animate-on-scroll">
+                <div class="category-image-container">
+                    <img src="category_community_investment.jpg" alt="Community Investment & Microfinance"
+                        class="category-image" loading="lazy">
+                </div>
+                <div class="category-header text-center">
+                    <div class="category-header-content">
+                        <span class="category-badge">Category 7</span>
+                        <h2 class="category-title">💼 Community Investment & Microfinance</h2>
+                        <p class="category-budget">Total Budget: $1,550,000</p>
+                        <p class="category-description">
+                            Strengthening community-based financial systems through cooperatives, savings groups, and
+                            inclusive investment opportunities.
+                        </p>
+                    </div>
                 </div>
             </div>
 
