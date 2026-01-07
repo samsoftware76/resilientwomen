@@ -20,44 +20,71 @@
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: var(--spacing-md);
+            gap: 30px;
+            /* Increased gap to prevent crowding */
         }
 
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
+        .gallery-card {
+            background: white;
             border-radius: var(--radius-md);
+            overflow: hidden;
+            /* Critical: prevents bleeding */
             box-shadow: var(--shadow-md);
-            transition: all var(--transition-base);
-            background: var(--color-white);
+            transition: transform var(--transition-base), box-shadow var(--transition-base);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--color-gray-200);
+            /* Definition boundary */
         }
 
-        .gallery-item:hover {
-            transform: translateY(-8px);
+        .gallery-card:hover {
+            transform: translateY(-5px);
             box-shadow: var(--shadow-xl);
         }
 
-        .gallery-item img {
+        .gallery-img-container {
             width: 100%;
-            height: 300px;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            display: block;
+            transition: transform 0.5s ease;
         }
 
-        .gallery-item-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(50, 64, 78, 0.9), transparent);
-            color: white;
-            padding: var(--spacing-md);
-            transform: translateY(100%);
-            transition: transform var(--transition-base);
+        .gallery-card:hover img {
+            transform: scale(1.05);
         }
 
-        .gallery-item:hover .gallery-item-overlay {
-            transform: translateY(0);
+        .gallery-content {
+            padding: 20px;
+            background: white;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .gallery-title {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Video Card Styles */
+        .video-card {
+            background: var(--color-white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            padding-bottom: 20px;
         }
 
         .video-container {
@@ -66,8 +93,7 @@
             /* 16:9 aspect ratio */
             height: 0;
             overflow: hidden;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-md);
+            background: black;
         }
 
         .video-container video {
@@ -202,7 +228,7 @@
                 </div>
 
                 <div class="gallery-item animate-on-scroll">
-                    <img src="IMG-20251118-WA0112.jpg" alt="Social welfare program">
+                    <img src="IMG-20251112-WA0112.jpg" alt="Social welfare program">
                     <div class="gallery-item-overlay">
                         <p style="font-weight: 600; margin: 0;">Social Welfare Program</p>
                     </div>
