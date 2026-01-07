@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Discover our comprehensive programs in economic empowerment, environmental protection, renewable energy, and community development in Mukono District, Uganda.">
-    <title>Our Programs - Resilient Women CBO</title>
+        content="Explore our 40+ transformative projects across economic empowerment, social welfare, environmental protection, renewable energy, and community development in Mukono District and Beyond.">
+    <title>Explore Our Projects - Resilient Women CBO</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,175 @@
         rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/png" href="reswomen logo.png">
+
+    <style>
+        /* Project-specific styles */
+        .category-section {
+            margin-bottom: 80px;
+        }
+
+        .category-header {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+            color: var(--color-accent);
+            padding: 60px 0;
+            margin-bottom: 50px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .category-header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .category-badge {
+            display: inline-block;
+            background: var(--color-accent);
+            color: var(--color-primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .category-title {
+            font-size: 42px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .category-budget {
+            font-size: 28px;
+            font-weight: 600;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+
+        .category-description {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-number {
+            background: var(--color-primary);
+            color: var(--color-accent);
+            padding: 12px 20px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .project-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--color-accent);
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .project-description {
+            font-size: 15px;
+            color: var(--color-gray-700);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .project-budget {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 20px;
+            border-top: 2px solid var(--color-gray);
+            margin-top: auto;
+        }
+
+        .budget-label {
+            font-size: 13px;
+            color: var(--color-gray-600);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .budget-amount {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--color-gray);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
+            border-radius: 10px;
+            transition: width 1s ease;
+        }
+
+        @media (max-width: 768px) {
+            .category-title {
+                font-size: 32px;
+            }
+
+            .category-budget {
+                font-size: 22px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .category-header {
+                padding: 40px 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -48,212 +217,966 @@
     <section class="hero" style="min-height: 400px;">
         <div class="container">
             <div class="hero-content text-center" style="max-width: 100%;">
-                <h1 class="hero-title">Our Programs</h1>
+                <h1 class="hero-title">Explore Our Projects</h1>
                 <p class="hero-subtitle">
-                    Comprehensive initiatives driving sustainable change across Mukono District
+                    40+ transformative initiatives creating lasting impact across Mukono District and Beyond
+                </p>
+                <p style="font-size: 20px; margin-top: 20px; color: var(--color-accent); font-weight: 600;">
+                    Total Portfolio: $13,210,000
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- STRATEGIC GOALS 2025-2030 -->
-    <section class="section bg-white">
+    <!-- ECONOMIC EMPOWERMENT & LIVELIHOODS -->
+    <section class="section bg-white category-section">
         <div class="container">
-            <div class="text-center mb-xl">
-                <h2>Strategic Goals (2025-2030)</h2>
-                <p style="max-width: 800px; margin: 0 auto; font-size: 18px;">
-                    Seven transformative pillars guiding our mission to create lasting change and build resilient
-                    communities
-                </p>
-            </div>
-
-            <!-- Goal 1: Economic Empowerment -->
-            <div class="card card-glass mb-xl animate-on-scroll">
-                <div class="grid grid-2 gap-lg" style="align-items: center;">
-                    <div>
-                        <div
-                            style="display: inline-block; padding: 12px 24px; background: var(--color-primary); border-radius: var(--radius-md); margin-bottom: var(--spacing-md); font-weight: 700; color: var(--color-accent);">
-                            Goal 1</div>
-                        <h3 class="text-primary">Economic Empowerment</h3>
-                        <p style="font-size: 18px; line-height: 1.8;">
-                            To increase economic opportunities for women, youth, and PWDs through skills development,
-                            entrepreneurship support, and access to subsidized micro-financing.
-                        </p>
-                        <h5 class="mt-lg mb-sm">Key Activities:</h5>
-                        <ul style="line-height: 2;">
-                            <li>Vocational skills training programs</li>
-                            <li>Entrepreneurship development workshops</li>
-                            <li>Subsidized micro-financing schemes</li>
-                            <li>Business mentorship and coaching</li>
-                            <li>Market linkage support</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <img src="IMG-20251115-WA0118.jpg" alt="Economic Empowerment Program"
-                            class="img-rounded shadow-md">
-                    </div>
+            <div class="category-header text-center">
+                <div class="category-header-content">
+                    <span class="category-badge">Category 1</span>
+                    <h2 class="category-title">💼 Economic Empowerment & Livelihoods</h2>
+                    <p class="category-budget">Total Budget: $2,230,000</p>
+                    <p class="category-description">
+                        Empowering women, youth, and persons with disabilities through skills development,
+                        entrepreneurship support, and access to sustainable income opportunities.
+                    </p>
                 </div>
             </div>
 
-            <!-- Goal 2: Sustainable Livelihoods -->
-            <div class="card card-glass mb-xl animate-on-scroll">
-                <div class="grid grid-2 gap-lg" style="align-items: center;">
-                    <div style="order: 2;">
-                        <div
-                            style="display: inline-block; padding: 12px 24px; background: var(--color-primary); border-radius: var(--radius-md); margin-bottom: var(--spacing-md); font-weight: 700; color: var(--color-accent);">
-                            Goal 2</div>
-                        <h3 class="text-primary">Sustainable Livelihoods</h3>
-                        <p style="font-size: 18px; line-height: 1.8;">
-                            To develop and implement income-generating projects that enhance household resilience and
-                            community prosperity.
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #1</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Women & Youth Economic Empowerment Initiative</h3>
+                        <p class="project-description">
+                            This project equips women and youth with practical skills, startup tools, and mentorship to
+                            start small businesses and improve household incomes.
                         </p>
-                        <h5 class="mt-lg mb-sm">Key Activities:</h5>
-                        <ul style="line-height: 2;">
-                            <li>Agriculture and farming initiatives</li>
-                            <li>Value addition and processing projects</li>
-                            <li>Cooperative development</li>
-                            <li>Savings and credit groups (SACCOs)</li>
-                            <li>Income diversification programs</li>
-                        </ul>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$250,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 15%;"></div>
+                        </div>
                     </div>
-                    <div style="order: 1;">
-                        <img src="IMG-20251118-WA0066.jpg" alt="Sustainable Livelihoods" class="img-rounded shadow-md">
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #2</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Inclusive Skills for Income Project (Women, Youth & PWDs)</h3>
+                        <p class="project-description">
+                            Provides vocational and hands-on skills training tailored for women, youth, and persons with
+                            disabilities to enhance employability and self-reliance.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$220,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 10%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #3</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Community Micro-Enterprise Development Program</h3>
+                        <p class="project-description">
+                            Supports community members to establish micro-enterprises through training, seed capital,
+                            and business development support.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$300,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 20%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #4</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Subsidized Community Micro-Loan Fund</h3>
+                        <p class="project-description">
+                            Establishes a revolving loan fund offering low-interest loans to vulnerable community
+                            members to start or grow income-generating activities.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$280,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 25%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #5</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Resilient Livelihoods Income-Generating Project</h3>
+                        <p class="project-description">
+                            Introduces sustainable income activities such as agriculture, crafts, and services to
+                            improve resilience against economic shocks.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$280,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 18%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #6</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Elderly Economic Support & Livelihood Project</h3>
+                        <p class="project-description">
+                            Empowers elderlies with light, age-friendly income activities and financial support to
+                            enhance dignity and independence.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$150,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 12%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #7</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Youth Innovation & Entrepreneurship Hub</h3>
+                        <p class="project-description">
+                            Creates a safe space for youth innovation, business incubation, mentorship, and
+                            entrepreneurship training.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$350,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 22%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #8</div>
+                    <div class="project-content">
+                        <h3 class="project-title">PWDs Skills Training and Business Startup Project</h3>
+                        <p class="project-description">
+                            Provides adaptive skills training, startup kits, and support for persons with disabilities
+                            to start sustainable businesses.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$180,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 14%;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Goal 3: Social Welfare & Inclusion -->
-            <div class="card card-glass mb-xl animate-on-scroll">
-                <div class="grid grid-2 gap-lg" style="align-items: center;">
-                    <div>
-                        <div
-                            style="display: inline-block; padding: 12px 24px; background: var(--color-primary); border-radius: var(--radius-md); margin-bottom: var(--spacing-md); font-weight: 700; color: var(--color-accent);">
-                            Goal 3</div>
-                        <h3 class="text-primary">Social Welfare & Inclusion</h3>
-                        <p style="font-size: 18px; line-height: 1.8;">
-                            To improve the welfare of vulnerable people—including elderlies and the less
-                            fortunate—through charity programs, care initiatives, and inclusive community projects.
-                        </p>
-                        <h5 class="mt-lg mb-sm">Key Activities:</h5>
-                        <ul style="line-height: 2;">
-                            <li>Elderly care and support programs</li>
-                            <li>Disability inclusion initiatives</li>
-                            <li>Emergency relief and assistance</li>
-                            <li>Community health programs</li>
-                            <li>Education support for vulnerable children</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <img src="IMG-20251118-WA0104.jpg" alt="Social Welfare Programs" class="img-rounded shadow-md">
-                    </div>
+    <!-- CHARITY & SOCIAL WELFARE -->
+    <section class="section bg-gray category-section">
+        <div class="container">
+            <div class="category-header text-center">
+                <div class="category-header-content">
+                    <span class="category-badge">Category 2</span>
+                    <h2 class="category-title">🤝 Social Welfare & Charity</h2>
+                    <p class="category-budget">Total Budget: $1,350,000</p>
+                    <p class="category-description">
+                        Providing care, support, and dignity to vulnerable community members including elderlies,
+                        persons with disabilities, and families in need.
+                    </p>
                 </div>
             </div>
 
-            <!-- Goal 4: Environmental Protection -->
-            <div class="card card-glass mb-xl animate-on-scroll">
-                <div class="grid grid-2 gap-lg" style="align-items: center;">
-                    <div style="order: 2;">
-                        <div
-                            style="display: inline-block; padding: 12px 24px; background: var(--color-primary); border-radius: var(--radius-md); margin-bottom: var(--spacing-md); font-weight: 700; color: var(--color-accent);">
-                            Goal 4</div>
-                        <h3 class="text-primary">Environmental Protection</h3>
-                        <p style="font-size: 18px; line-height: 1.8;">
-                            To promote environmental conservation through community education, tree planting,
-                            sustainable practices, and climate-resilient livelihoods.
+            <div class="projects-grid">
+                <!-- Project 9 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #9</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Community Care & Support Program for the Less Fortunate</h3>
+                        <p class="project-description">
+                            Provides food, clothing, basic necessities, and psychosocial support to the most vulnerable
+                            households.
                         </p>
-                        <h5 class="mt-lg mb-sm">Key Activities:</h5>
-                        <ul style="line-height: 2;">
-                            <li>Tree planting and reforestation campaigns</li>
-                            <li>Environmental education programs</li>
-                            <li>Waste management initiatives</li>
-                            <li>Climate change adaptation training</li>
-                            <li>Sustainable agriculture practices</li>
-                        </ul>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$200,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 16%;"></div>
+                        </div>
                     </div>
-                    <div style="order: 1;">
-                        <img src="IMG-20251118-WA0064.jpg" alt="Environmental Protection" class="img-rounded shadow-md">
+                </div>
+
+                <!-- Project 10 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #10</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Elderly Care and Support Initiative</h3>
+                        <p class="project-description">
+                            Delivers care packages, health referrals, and social support to isolated and vulnerable
+                            elderlies.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$180,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 13%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #11</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Emergency Relief and Social Assistance Program</h3>
+                        <p class="project-description">
+                            Responds to emergencies such as illness, disasters, or extreme poverty with immediate relief
+                            support.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$250,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 19%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 12 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #12</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Vulnerable Households Support Project</h3>
+                        <p class="project-description">
+                            Improves living conditions of vulnerable households through essential support and livelihood
+                            linkage.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$220,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 17%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 13 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #13</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Community Health, Nutrition & Well-Being Program</h3>
+                        <p class="project-description">
+                            Promotes health education, nutrition awareness, and basic wellness support within the
+                            community.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$300,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 22%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 14 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #14</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Inclusive Social Protection Project for PWDs</h3>
+                        <p class="project-description">
+                            Enhances social inclusion, access to services, and economic participation of persons with
+                            disabilities.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$200,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 15%;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Goal 5: Renewable Energy Transformation -->
-            <div class="card card-glass mb-xl animate-on-scroll">
-                <div class="grid grid-2 gap-lg" style="align-items: center;">
-                    <div>
-                        <div
-                            style="display: inline-block; padding: 12px 24px; background: var(--color-primary); border-radius: var(--radius-md); margin-bottom: var(--spacing-md); font-weight: 700; color: var(--color-accent);">
-                            Goal 5</div>
-                        <h3 class="text-primary">Renewable Energy Transformation</h3>
-                        <p style="font-size: 18px; line-height: 1.8;">
-                            To increase access to renewable energy solutions, training, equipment, and awareness,
-                            positioning the community toward clean and sustainable power.
-                        </p>
-                        <h5 class="mt-lg mb-sm">Key Activities:</h5>
-                        <ul style="line-height: 2;">
-                            <li>Solar energy installation and training</li>
-                            <li>Biogas technology promotion</li>
-                            <li>Energy-efficient cookstoves distribution</li>
-                            <li>Renewable energy awareness campaigns</li>
-                            <li>Technical skills training in renewable energy</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <img src="IMG-20251118-WA0110.jpg" alt="Renewable Energy" class="img-rounded shadow-md">
-                    </div>
+    <!-- COMMUNITY EDUCATION & LIFE SKILLS -->
+    <section class="section bg-white category-section">
+        <div class="container">
+            <div class="category-header text-center">
+                <div class="category-header-content">
+                    <span class="category-badge">Category 3</span>
+                    <h2 class="category-title">📚 Community Education & Life Skills</h2>
+                    <p class="category-budget">Total Budget: $850,000</p>
+                    <p class="category-description">
+                        Building capacity through education, leadership development, and essential life skills training
+                        for sustainable community transformation.
+                    </p>
                 </div>
             </div>
 
-            <!-- Goal 6: Green & Intelligent Building Advocacy -->
-            <div class="card card-glass mb-xl animate-on-scroll">
-                <div class="grid grid-2 gap-lg" style="align-items: center;">
-                    <div style="order: 2;">
-                        <div
-                            style="display: inline-block; padding: 12px 24px; background: var(--color-primary); border-radius: var(--radius-md); margin-bottom: var(--spacing-md); font-weight: 700; color: var(--color-accent);">
-                            Goal 6</div>
-                        <h3 class="text-primary">Green & Intelligent Building Advocacy</h3>
-                        <p style="font-size: 18px; line-height: 1.8;">
-                            To support the transition to green, energy-efficient, and intelligent building technologies
-                            within the community.
+            <div class="projects-grid">
+                <!-- Project 15 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #15</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Community Life Skills & Financial Literacy Program</h3>
+                        <p class="project-description">
+                            Educates community members on budgeting, saving, entrepreneurship, and responsible financial
+                            management.
                         </p>
-                        <h5 class="mt-lg mb-sm">Key Activities:</h5>
-                        <ul style="line-height: 2;">
-                            <li>Green building awareness and education</li>
-                            <li>Energy-efficient construction training</li>
-                            <li>Sustainable building materials promotion</li>
-                            <li>Smart building technology advocacy</li>
-                            <li>Demonstration projects and case studies</li>
-                        </ul>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$150,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 18%;"></div>
+                        </div>
                     </div>
-                    <div style="order: 1;">
-                        <img src="IMG-20251025-WA0055.jpg" alt="Green Building" class="img-rounded shadow-md">
+                </div>
+
+                <!-- Project 16 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #16</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Women and Youth Leadership Development Project</h3>
+                        <p class="project-description">
+                            Builds leadership, advocacy, and decision-making skills among women and youth leaders.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$180,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 21%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 17 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #17</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Socio-Economic Empowerment Training Program</h3>
+                        <p class="project-description">
+                            Provides training on life skills, livelihoods, and social empowerment for vulnerable groups.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$160,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 19%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 18 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #18</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Community Awareness & Capacity Building Initiative</h3>
+                        <p class="project-description">
+                            Raises awareness on social, economic, and environmental issues while strengthening community
+                            participation.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$140,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 16%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 19 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #19</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Youth Life Skills and Employability Project</h3>
+                        <p class="project-description">
+                            Prepares youth for employment through soft skills, work readiness, and entrepreneurship
+                            training.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$220,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 26%;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Goal 7: Institutional Strengthening -->
-            <div class="card card-glass mb-xl animate-on-scroll">
-                <div class="grid grid-2 gap-lg" style="align-items: center;">
-                    <div>
-                        <div
-                            style="display: inline-block; padding: 12px 24px; background: var(--color-primary); border-radius: var(--radius-md); margin-bottom: var(--spacing-md); font-weight: 700; color: var(--color-accent);">
-                            Goal 7</div>
-                        <h3 class="text-primary">Institutional Strengthening</h3>
-                        <p style="font-size: 18px; line-height: 1.8;">
-                            To build a strong, transparent, and sustainable organization with enhanced governance,
-                            partnerships, and operational capacity.
+    <!-- ENVIRONMENTAL PROTECTION & CLIMATE ACTION -->
+    <section class="section bg-gray category-section">
+        <div class="container">
+            <div class="category-header text-center">
+                <div class="category-header-content">
+                    <span class="category-badge">Category 4</span>
+                    <h2 class="category-title">🌍 Environment & Climate Action</h2>
+                    <p class="category-budget">Total Budget: $1,450,000</p>
+                    <p class="category-description">
+                        Protecting our environment through conservation, tree planting, sustainable practices, and
+                        climate-resilient livelihoods.
+                    </p>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 20 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #20</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Community Environmental Protection & Conservation Project</h3>
+                        <p class="project-description">
+                            Promotes environmental stewardship through education, conservation activities, and community
+                            engagement.
                         </p>
-                        <h5 class="mt-lg mb-sm">Key Activities:</h5>
-                        <ul style="line-height: 2;">
-                            <li>Governance and leadership training</li>
-                            <li>Financial management capacity building</li>
-                            <li>Strategic partnerships development</li>
-                            <li>Monitoring and evaluation systems</li>
-                            <li>Resource mobilization and fundraising</li>
-                        </ul>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$220,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 15%;"></div>
+                        </div>
                     </div>
-                    <div>
-                        <img src="IMG-20251118-WA0112.jpg" alt="Institutional Strengthening"
-                            class="img-rounded shadow-md">
+                </div>
+
+                <!-- Project 21 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #21</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Tree Planting and Climate Resilience Initiative</h3>
+                        <p class="project-description">
+                            Engages communities in tree planting to restore ecosystems and combat climate change.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$300,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 21%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 22 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #22</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Green Communities Environmental Awareness Program</h3>
+                        <p class="project-description">
+                            Educates households on sustainable practices, waste reduction, and environmental protection.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$180,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 12%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 23 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #23</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Waste Management and Environmental Clean-Up Project</h3>
+                        <p class="project-description">
+                            Improves sanitation through waste collection, recycling awareness, and community clean-up
+                            campaigns.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$350,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 24%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 24 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #24</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Climate-Smart Livelihoods Development Project</h3>
+                        <p class="project-description">
+                            Introduces climate-resilient income activities that protect the environment while generating
+                            income.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$400,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 28%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RENEWABLE ENERGY -->
+    <section class="section bg-white category-section">
+        <div class="container">
+            <div class="category-header text-center">
+                <div class="category-header-content">
+                    <span class="category-badge">Category 5</span>
+                    <h2 class="category-title">🔋 Renewable Energy</h2>
+                    <p class="category-budget">Total Budget: $3,700,000</p>
+                    <p class="category-description">
+                        Transforming communities through access to clean, affordable, and sustainable renewable energy
+                        solutions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 25 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #25</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Community Renewable Energy Access Project</h3>
+                        <p class="project-description">
+                            Expands access to affordable renewable energy solutions for households and small businesses.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$600,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 16%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 26 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #26</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Solar Energy for Vulnerable Households Initiative</h3>
+                        <p class="project-description">
+                            Provides solar lighting systems to vulnerable households lacking reliable electricity.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$800,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 22%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 27 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #27</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Renewable Energy Training & Equipment Support Project</h3>
+                        <p class="project-description">
+                            Trains community members on renewable energy installation and provides starter equipment.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$450,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 12%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 28 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #28</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Clean Energy Adoption for Women & Youth Program</h3>
+                        <p class="project-description">
+                            Empowers women and youth to adopt and promote clean energy technologies.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$350,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 9%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 29 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #29</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Off-Grid Solar Solutions for Community Empowerment</h3>
+                        <p class="project-description">
+                            Deploys off-grid solar systems to enhance livelihoods and community services.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$1,000,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 27%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 30 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #30</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Renewable Energy Skills Development Project</h3>
+                        <p class="project-description">
+                            Builds technical skills in renewable energy systems for employment and entrepreneurship.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$500,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 14%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GREEN & INTELLIGENT BUILDINGS -->
+    <section class="section bg-gray category-section">
+        <div class="container">
+            <div class="category-header text-center">
+                <div class="category-header-content">
+                    <span class="category-badge">Category 6</span>
+                    <h2 class="category-title">🏗️ Green & Intelligent Buildings</h2>
+                    <p class="category-budget">Total Budget: $2,080,000</p>
+                    <p class="category-description">
+                        Advancing sustainable construction practices and smart building technologies for
+                        energy-efficient, climate-friendly communities.
+                    </p>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 31 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #31</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Green Building Construction Awareness Project</h3>
+                        <p class="project-description">
+                            Raises awareness on environmentally friendly building materials and construction practices.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$200,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 10%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 32 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #32</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Energy-Efficient Housing Advocacy Program</h3>
+                        <p class="project-description">
+                            Promotes energy-efficient housing designs to reduce energy costs and environmental impact.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$250,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 12%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 33 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #33</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Intelligent Buildings Awareness & Demonstration Project</h3>
+                        <p class="project-description">
+                            Introduces smart building concepts through demonstrations and community education.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$400,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 19%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 34 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #34</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Green & Intelligent Built Environment Transition Initiative</h3>
+                        <p class="project-description">
+                            Advocates for transitioning to sustainable, intelligent, and climate-friendly building
+                            systems.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$600,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 29%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 35 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #35</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sustainable Building Practices Community Education Project</h3>
+                        <p class="project-description">
+                            Educates builders, households, and leaders on sustainable construction techniques.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$280,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 13%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 36 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #36</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Low-Cost Energy-Efficient Housing Advocacy Project</h3>
+                        <p class="project-description">
+                            Promotes affordable, energy-efficient housing solutions for low-income families.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$350,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 17%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMUNITY INVESTMENT & COOPERATIVES -->
+    <section class="section bg-white category-section">
+        <div class="container">
+            <div class="category-header text-center">
+                <div class="category-header-content">
+                    <span class="category-badge">Category 7</span>
+                    <h2 class="category-title">💼 Community Investment & Microfinance</h2>
+                    <p class="category-budget">Total Budget: $1,550,000</p>
+                    <p class="category-description">
+                        Strengthening community-based financial systems through cooperatives, savings groups, and
+                        inclusive investment opportunities.
+                    </p>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 37 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #37</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Community Cooperative Development & Capital Investment Project</h3>
+                        <p class="project-description">
+                            Strengthens community cooperatives through training, governance support, and capital
+                            investment.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$400,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 26%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 38 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #38</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Women-Led Community Investment Initiative</h3>
+                        <p class="project-description">
+                            Supports women-led investment groups to grow savings, assets, and enterprises.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$300,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 19%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 39 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #39</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Youth & Women Cooperative Enterprise Project</h3>
+                        <p class="project-description">
+                            Builds cooperative enterprises led by youth and women for shared economic growth.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$350,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 23%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 40 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-number">PROJECT #40</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Community Savings, Loans & Investment Program</h3>
+                        <p class="project-description">
+                            Promotes a culture of saving, responsible borrowing, and local investment.
+                        </p>
+                        <div class="project-budget">
+                            <div>
+                                <div class="budget-label">Estimated Budget</div>
+                                <div class="budget-amount">$500,000</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 32%;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -263,10 +1186,11 @@
     <!-- CALL TO ACTION -->
     <section class="section bg-primary">
         <div class="container text-center">
-            <h2 class="mb-md" style="color: var(--color-accent);">Support Our Programs</h2>
+            <h2 class="mb-md" style="color: var(--color-accent);">Support Our Transformative Projects</h2>
             <p class="mb-xl"
                 style="font-size: 20px; max-width: 700px; margin: 0 auto var(--spacing-xl); color: var(--color-accent);">
-                Your contribution helps us expand these vital programs and reach more communities
+                Every contribution brings us closer to achieving our $13.2M goal and transforming lives across Mukono
+                District and Beyond
             </p>
             <div class="flex-center gap-md" style="flex-wrap: wrap;">
                 <a href="get-involved.html#donate" class="btn btn-accent btn-lg">Make a Donation</a>
@@ -283,7 +1207,7 @@
                 <div class="footer-section">
                     <h4>Resilient Women CBO</h4>
                     <p style="opacity: 0.9; line-height: 1.8;">
-                        Empowering communities in Mukono District, Uganda through economic development, environmental
+                        Empowering communities in Mukono District and Beyond through economic development, environmental
                         protection, and renewable energy advocacy.
                     </p>
                     <p style="margin-top: var(--spacing-md); font-weight: 600; color: var(--color-primary);">
