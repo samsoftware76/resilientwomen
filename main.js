@@ -72,6 +72,48 @@ document.addEventListener('DOMContentLoaded', function () {
   const animatedElements = document.querySelectorAll('.animate-on-scroll');
   animatedElements.forEach(el => observer.observe(el));
 
+  // === HERO CAROUSEL LOGIC ===
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.carousel-dot');
+
+  if (slides.length > 0) {
+    let currentSlide = 0;
+    const intervalTime = 6000; // 6 seconds
+    let slideInterval;
+
+    // Function to show specific slide
+    window.showSlide = function (index) {
+      if (index >= slides.length) index = 0;
+      if (index < 0) index = slides.length - 1;
+
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+
+      currentSlide = index;
+
+      clearInterval(slideInterval);
+      slideInterval = setInterval(nextSlide, intervalTime);
+    };
+
+    function nextSlide() {
+      let nextIndex = currentSlide + 1;
+      if (nextIndex >= slides.length) nextIndex = 0;
+
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+
+      slides[nextIndex].classList.add('active');
+      dots[nextIndex].classList.add('active');
+
+      currentSlide = nextIndex;
+    }
+
+    slideInterval = setInterval(nextSlide, intervalTime);
+  }
+
   // === ACTIVE NAVIGATION LINK ===
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   const navLinksAll = document.querySelectorAll('.nav-link');
@@ -82,66 +124,65 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // === FORM VALIDATION ===
+  // === FORM VALIDATION & SUBMISSION ===
   const forms = document.querySelectorAll('form');
   forms.forEach(form => {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      let isValid = true;
-      const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn ? submitBtn.innerText : 'Send';
 
-      inputs.forEach(input => {
-        if (!input.value.trim()) {
-          isValid = false;
-          input.style.borderColor = 'var(--color-error)';
-
-          // Remove error styling on input
-          input.addEventListener('input', function () {
-            this.style.borderColor = '';
-          }, { once: true });
-        }
-      });
-
-      // Email validation
-      const emailInputs = form.querySelectorAll('input[type="email"]');
-      emailInputs.forEach(input => {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (input.value && !emailRegex.test(input.value)) {
-          isValid = false;
-          input.style.borderColor = 'var(--color-error)';
-          alert('Please enter a valid email address');
-        }
-      });
-
-      if (isValid) {
-        // Show success message
-        const successMessage = document.createElement('div');
-        successMessage.className = 'alert alert-success';
-        successMessage.textContent = 'Thank you! Your message has been received.';
-        successMessage.style.cssText = `
-          position: fixed;
-          top: 100px;
-          right: 20px;
-          background: var(--color-success);
-          color: white;
-          padding: 20px 30px;
-          border-radius: var(--radius-md);
-          box-shadow: var(--shadow-lg);
-          z-index: 9999;
-          animation: slideInRight 0.5s ease-out;
-        `;
-        document.body.appendChild(successMessage);
-
-        // Remove success message after 5 seconds
-        setTimeout(() => {
-          successMessage.style.animation = 'fadeOut 0.5s ease-out';
-          setTimeout(() => successMessage.remove(), 500);
-        }, 5000);
-
-        // Reset form
-        form.reset();
+      if (submitBtn) {
+        submitBtn.innerText = 'Sending...';
+        submitBtn.style.opacity = '0.7';
       }
+
+      // 1. Gather Data
+      const formData = new FormData(form);
+      let subject = "Website Inquiry";
+      let bodyLines = [];
+
+      // Smart subject line
+      const subjectInput = form.querySelector('select[name="subject"]') || form.querySelector('select');
+      if (subjectInput && subjectInput.value) {
+        subject = "Website: " + (subjectInput.options[subjectInput.selectedIndex].text);
+      }
+
+      // Smart body content
+      const inputs = form.querySelectorAll('input, textarea, select');
+      inputs.forEach(input => {
+        if (!input.value) return;
+
+        // Get label text
+        let label = input.name;
+        if (input.previousElementSibling && input.previousElementSibling.tagName === 'LABEL') {
+          label = input.previousElementSibling.innerText.replace('*', '').trim();
+        } else if (input.closest('.form-group') && input.closest('.form-group').querySelector('label')) {
+          label = input.closest('.form-group').querySelector('label').innerText.replace('*', '').trim();
+        }
+
+        bodyLines.push(`${label}: ${input.value}`);
+      });
+
+      const body = bodyLines.join('\n');
+
+      // 2. Open Mail Client (Wrapped in timeout to allow UI update)
+      setTimeout(() => {
+        window.location.href = `mailto:info@resilientwomencbo.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        // 3. Reset UI
+        if (submitBtn) {
+          submitBtn.innerText = 'Email Client Opened';
+          submitBtn.style.backgroundColor = 'var(--color-success)';
+          setTimeout(() => {
+            submitBtn.innerText = originalText;
+            submitBtn.style.backgroundColor = '';
+            submitBtn.style.opacity = '1';
+            form.reset();
+          }, 3000);
+        }
+      }, 500);
     });
   });
 

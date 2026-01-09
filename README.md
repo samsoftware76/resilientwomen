@@ -53,7 +53,7 @@ For deployment, upload all files to your web hosting service.
 ## Contact
 
 **Resilient Women CBO**
-- Email: resilientwomen@gmail.com
+- Email: info@resilientwomencbo.org
 - Phone: +256 774 622736 / +256 772 196766
 - Location: Mukono District, Uganda
 - Website: www.resilientwomen.org
